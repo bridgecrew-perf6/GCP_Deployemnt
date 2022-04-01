@@ -13,15 +13,10 @@ from textwrap import dedent
 
 # The DAG object; we'll need this to instantiate a DAG
 from airflow import DAG
-from airflow.providers.amazon.aws.hooks.s3 import S3Hook
-from airflow.providers.google.cloud.hooks.gcs import GCSHook
-from airflow.contrib.hooks.gcs_hook import GoogleCloudStorageHook
 
 # Operators; we need this to operate!
 from airflow.operators.bash import BashOperator
 from airflow.operators.python_operator import PythonOperator
-from airflow.providers.google.cloud.operators.gcs import GCSFileTransformOperator
-from airflow.providers.google.cloud.operators.gcs import GCSListObjectsOperator
 
 from nowcast_api import nowcast
 
